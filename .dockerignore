@@ -1,0 +1,5 @@
+./vascode
+node_modules
+./gitignore
+.DS_Store
+.git

@@ -1,0 +1,12 @@
+version: '2.4'
+services:
+  mongodb:
+    image: mongo:4.2.9
+    container_name: mongodb
+    restart: unless-stopped
+    ports: 
+      - 27017:27017
+    volumes:
+      - ./data/db:/data/db
+      - ./data/configdb:/data/configdb
+    

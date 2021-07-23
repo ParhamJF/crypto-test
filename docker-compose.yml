@@ -1,0 +1,23 @@
+version: '2.4'
+services:
+  mongodb:
+    image: mongo:4.2.9
+    container_name: mongod
+    restart: unless-stopped
+    volumes:
+      - ./data/db:/data/db
+      - ./data/configdb:/data/configdb
+    
+  kraken:
+    image: parhamjf/kraken-test:development
+    container_name: kraken-test
+    working_dir: /app
+    command: npm start
+    depends_on: 
+        - mongodb
+    environment: 
+        - DB_HOST=mongodb:27017
+        - DB_NAME=kraken
+        - DB_COLLECTION=transactions
+    volumes:
+        - ./:/app/output
