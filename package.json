@@ -1,7 +1,7 @@
 {
-  "name": "kraken-crypto-payments-hiring-test-v1.4.0",
+  "name": "crypto-payments-hiring-test-v1.4.0",
   "version": "1.0.0",
-  "description": "kraken-crypto-payments-hiring-test",
+  "description": "crypto-payments-hiring-test",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
